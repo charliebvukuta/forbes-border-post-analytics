@@ -54,4 +54,4 @@ By the end of this sprint, the following deliverables will be produced and pushe
 4.  **Management Brief / Final Report & Presentation Slides**: A comprehensive PDF/DOCX report and PDF/PPTX slides summarizing the methodology, key visual findings, actionable recommendations, and limitations for a live presentation session.
 
 ---
-*Note: This project is part of a simulated data analytics internship sprint.*
+*Note: This project uses simulated data for analytics.*
