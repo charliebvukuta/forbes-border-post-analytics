@@ -1,0 +1,6 @@
+,Gap cases caught,Gap USD caught,% of gap cases,% of gap USD,Hit rate % (cases / inspections)
+Actual inspections in 2025,36.0,11716.3,29.3,34.7,23.1
+Random selection,40.4,11203.4,32.8,33.1,25.9
+Current risk rule (High first),29.5,8361.0,24.0,24.7,18.9
+Model A (risk category re-weighted),47.2,14432.1,38.4,42.7,30.3
+Model B (all features),45.0,12692.6,36.6,37.6,28.8

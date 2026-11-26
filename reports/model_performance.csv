@@ -1,0 +1,7 @@
+Model,ROC-AUC (mean),ROC-AUC (sd),PR-AUC (mean)
+A. Logistic regression – risk category only,0.587,0.059,0.307
+B. Logistic regression – all features,0.542,0.059,0.307
+C. Random forest – all features,0.525,0.058,0.308
+D. Gradient boosting – all features,0.517,0.053,0.289
+Current risk category (no model),0.408,,0.228
+Random guessing,0.5,,0.256

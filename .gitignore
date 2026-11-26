@@ -1,0 +1,22 @@
+# Power BI local settings and cache
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/editorSettings.json
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+
+# Office lock files
+~$*
+
+# Working files not part of the deliverables
+notebooks/_backup_before_review/
+dashboard/_tests/
+dashboard/HOW_TO_OPEN.txt
+WhatsApp Image*
+reports/Forbes Border Post Revenue Assurance & Risk Analysis.docx
+/Forbes_Border_Post_Final_Report.docx
+/Forbes_Border_Post_Final_Report.pdf
+/Forbes_Border_Post_Simulated_Data.xlsx
+/Project proposal.docx

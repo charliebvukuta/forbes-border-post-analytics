@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Forbes_Border_Post_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3da1685b-167a-447d-a034-e64be819c19b"
+  }
+}

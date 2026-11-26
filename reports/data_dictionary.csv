@@ -1,0 +1,30 @@
+Column Name,Data Type,Non-Null Count,Unique Values,Description
+Declaration_ID,str,480,480,Unique identifier for the customs declaration (primary key)
+Declaration_Date,datetime64[us],480,262,Date the declaration was submitted
+Border_Post,category,480,1,The border post where goods entered (Forbes only)
+Importer_ID,str,480,60,Unique identifier for the importing entity
+Country_of_Origin,category,480,6,Country where goods were manufactured
+Commodity_Description,str,480,10,Text description of the goods (one HS code per commodity)
+HS_Code,int64,480,10,Harmonized System tariff classification code (treat as text label)
+Risk_Category,category,480,3,Customs risk profile assigned before clearance (Low < Medium < High)
+Declared_Customs_Value_USD,float64,480,480,Customs value declared by the importer
+Assessed_Customs_Value_USD,float64,480,480,Customs value assessed by customs
+Declared_Customs_Duty_USD,float64,480,480,Duty declared by the importer
+Assessed_Customs_Duty_USD,float64,480,480,Duty assessed by customs
+Declared_Import_VAT_USD,float64,480,479,Import VAT declared by the importer
+Assessed_Import_VAT_USD,float64,480,479,Import VAT assessed by customs
+Declared_Excise_USD,float64,480,89,Excise duty declared by the importer (0 for non-excisable goods)
+Assessed_Excise_USD,float64,480,89,Excise duty assessed by customs
+Declared_Total_Revenue_USD,float64,480,480,Total revenue declared (duty + VAT + excise)
+Assessed_Total_Revenue_USD,float64,480,480,Total revenue assessed by customs (authoritative total)
+Inspection_Conducted,category,480,2,Whether a physical inspection took place (Yes/No)
+Offence_Detected,category,480,2,Whether an offence was found (Yes/No); only possible when inspected
+Offence_Type,category,480,6,Category of offence; 'No Offence' where none was detected
+Potential_Revenue_Gap_USD,float64,480,124,"Assessed minus declared total revenue, floored at 0 (estimate, not proof of loss)"
+Additional_Revenue_Recovered_USD,float64,480,26,Revenue actually recovered following a detected offence
+Payment_Status,category,480,3,"Status of the payment (Paid, Part-paid, Pending)"
+DQ_Assessed_Components_Mismatch,str,480,2,Data-quality flag: assessed duty+VAT+excise does not equal assessed total
+DQ_Assessed_Below_Declared,str,480,2,"Data-quality flag: assessed < declared (over-declaration), gap recorded as 0"
+Month,str,480,12,Year-month of the declaration (YYYY-MM); joins to Monthly_Targets
+Has_Revenue_Gap,str,480,2,Yes if Potential_Revenue_Gap_USD > 0
+Gap_Pct_of_Declared,float64,480,122,Potential revenue gap as % of declared total revenue

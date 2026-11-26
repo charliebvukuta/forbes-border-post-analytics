@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Forbes_Border_Post_Dashboard.SemanticModel"
+    }
+  }
+}

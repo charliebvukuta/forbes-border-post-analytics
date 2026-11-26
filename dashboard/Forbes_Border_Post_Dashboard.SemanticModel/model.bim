@@ -1,0 +1,757 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ProjectFolder\", \"Transactions\", \"Targets\", \"ModelScores\", \"TargetingComparison\", \"Calendar\", \"_Measures\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "ProjectFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:\\Users\\Hp\\Downloads\\Charlie Files\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "f42c324a-54f8-4c57-be46-6e3f31d9ef03"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Transactions_Calendar",
+        "fromColumn": "Declaration_Date",
+        "fromTable": "Transactions",
+        "toColumn": "Date",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "Transactions_ModelScores",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Declaration_ID",
+        "fromTable": "Transactions",
+        "toColumn": "Declaration_ID",
+        "toTable": "ModelScores"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Transactions",
+        "columns": [
+          {
+            "name": "Declaration_ID",
+            "dataType": "string",
+            "lineageTag": "57cf9b5c-8eb9-4690-95ca-6af0c9d49f51",
+            "sourceColumn": "Declaration_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Declaration_Date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "lineageTag": "1ebe22aa-8997-4715-90f5-6d034dd7bf67",
+            "sourceColumn": "Declaration_Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Border_Post",
+            "dataType": "string",
+            "lineageTag": "3042a834-8c54-4dd3-b451-432849f52c20",
+            "sourceColumn": "Border_Post",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Importer_ID",
+            "dataType": "string",
+            "lineageTag": "56b19483-a150-4231-98a1-31a09c2e84d5",
+            "sourceColumn": "Importer_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country_of_Origin",
+            "dataType": "string",
+            "lineageTag": "73d9dbe1-2f90-48fd-9d77-40c03e56988d",
+            "sourceColumn": "Country_of_Origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Commodity_Description",
+            "dataType": "string",
+            "lineageTag": "33e936ee-83c2-4881-9f4f-402922085c17",
+            "sourceColumn": "Commodity_Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HS_Code",
+            "dataType": "string",
+            "lineageTag": "bb4aea88-6732-49f6-971d-58575344f2da",
+            "sourceColumn": "HS_Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Risk_Category",
+            "dataType": "string",
+            "lineageTag": "e661ad9e-d7a8-4d8f-97e7-b97c9bef06e0",
+            "sortByColumn": "Risk Order",
+            "sourceColumn": "Risk_Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Declared_Customs_Value_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b08968d6-f4c9-42a6-90a9-6a3e373cc8ad",
+            "sourceColumn": "Declared_Customs_Value_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Assessed_Customs_Value_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "3f04d357-949d-4385-a5d2-475b872e68f9",
+            "sourceColumn": "Assessed_Customs_Value_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Declared_Customs_Duty_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f7d7964d-cb97-471c-a01b-9edf764a7979",
+            "sourceColumn": "Declared_Customs_Duty_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Assessed_Customs_Duty_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b4691d26-c224-417f-9434-6fb049579b83",
+            "sourceColumn": "Assessed_Customs_Duty_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Declared_Import_VAT_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "abc134e8-505c-483b-a85d-b46f2361d8f5",
+            "sourceColumn": "Declared_Import_VAT_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Assessed_Import_VAT_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "baed5690-9e4c-403d-8f06-f65275e88aea",
+            "sourceColumn": "Assessed_Import_VAT_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Declared_Excise_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "91a20cd7-9bb7-4a05-89a1-5698319467b6",
+            "sourceColumn": "Declared_Excise_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Assessed_Excise_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "0dd602f1-3ae4-4294-900d-77d9a74a40ec",
+            "sourceColumn": "Assessed_Excise_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Declared_Total_Revenue_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b199a252-7e81-47f3-b04d-6cc2b63a1b8c",
+            "sourceColumn": "Declared_Total_Revenue_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Assessed_Total_Revenue_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "dd76c06f-e748-4a01-8ee5-ead9e0180e90",
+            "sourceColumn": "Assessed_Total_Revenue_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Inspection_Conducted",
+            "dataType": "string",
+            "lineageTag": "7291ae1f-a440-424b-9d56-a8d96995d43b",
+            "sourceColumn": "Inspection_Conducted",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Offence_Detected",
+            "dataType": "string",
+            "lineageTag": "95530fea-e06a-4758-a842-980545fb7505",
+            "sourceColumn": "Offence_Detected",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Offence_Type",
+            "dataType": "string",
+            "lineageTag": "93265dda-2628-49a6-a648-49177535ea14",
+            "sourceColumn": "Offence_Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Potential_Revenue_Gap_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "b4754a58-fdc9-4425-9b94-3a31812e8293",
+            "sourceColumn": "Potential_Revenue_Gap_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Additional_Revenue_Recovered_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "4098ae05-1642-4946-87b0-f3cbf990d192",
+            "sourceColumn": "Additional_Revenue_Recovered_USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Payment_Status",
+            "dataType": "string",
+            "lineageTag": "8bd3b0b2-88dd-41a0-884a-266127a74992",
+            "sourceColumn": "Payment_Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DQ_Assessed_Components_Mismatch",
+            "dataType": "string",
+            "lineageTag": "c2c688f3-9a80-4b7d-a4f4-5c114d426270",
+            "sourceColumn": "DQ_Assessed_Components_Mismatch",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DQ_Assessed_Below_Declared",
+            "dataType": "string",
+            "lineageTag": "449c31ce-3fbb-4ab1-8b59-dcd8f03a3941",
+            "sourceColumn": "DQ_Assessed_Below_Declared",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "0b2b3d18-5667-4472-8266-42c56212d3fd",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Has_Revenue_Gap",
+            "dataType": "string",
+            "lineageTag": "4f6fc0dd-8f88-4b22-ab13-a4851bc82fe0",
+            "sourceColumn": "Has_Revenue_Gap",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gap_Pct_of_Declared",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "c1c9a4f4-78cd-4446-a045-6bec0c8e6242",
+            "sourceColumn": "Gap_Pct_of_Declared",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Risk Order",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "0fb23c2a-1b47-4749-a035-f79ad987a17a",
+            "sourceColumn": "Risk Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Detection Stage",
+            "dataType": "string",
+            "lineageTag": "886a3a55-be7b-4e42-b38a-011cc35071a7",
+            "sourceColumn": "Detection Stage",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7f1358d8-8112-4d05-8bb1-50c982d59436",
+        "partitions": [
+          {
+            "name": "Transactions",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(ProjectFolder & \"data\\processed\\cleaned_customs_transactions.csv\"), [Delimiter=\",\", Columns=29, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"Declaration_ID\", type text}, {\"Declaration_Date\", type date}, {\"Border_Post\", type text}, {\"Importer_ID\", type text}, {\"Country_of_Origin\", type text}, {\"Commodity_Description\", type text}, {\"HS_Code\", type text}, {\"Risk_Category\", type text}, {\"Declared_Customs_Value_USD\", type number}, {\"Assessed_Customs_Value_USD\", type number}, {\"Declared_Customs_Duty_USD\", type number}, {\"Assessed_Customs_Duty_USD\", type number}, {\"Declared_Import_VAT_USD\", type number}, {\"Assessed_Import_VAT_USD\", type number}, {\"Declared_Excise_USD\", type number}, {\"Assessed_Excise_USD\", type number}, {\"Declared_Total_Revenue_USD\", type number}, {\"Assessed_Total_Revenue_USD\", type number}, {\"Inspection_Conducted\", type text}, {\"Offence_Detected\", type text}, {\"Offence_Type\", type text}, {\"Potential_Revenue_Gap_USD\", type number}, {\"Additional_Revenue_Recovered_USD\", type number}, {\"Payment_Status\", type text}, {\"DQ_Assessed_Components_Mismatch\", type text}, {\"DQ_Assessed_Below_Declared\", type text}, {\"Month\", type text}, {\"Has_Revenue_Gap\", type text}, {\"Gap_Pct_of_Declared\", type number}}, \"en-US\"),",
+                "    AddRiskOrder = Table.AddColumn(Typed, \"Risk Order\", each if [Risk_Category] = \"Low\" then 1 else if [Risk_Category] = \"Medium\" then 2 else 3, Int64.Type),",
+                "    AddStage = Table.AddColumn(AddRiskOrder, \"Detection Stage\", each if [Inspection_Conducted] = \"No\" then \"1. Not inspected\" else if [Offence_Detected] = \"No\" then \"2. Inspected - no offence\" else \"3. Offence detected\", type text)",
+                "in",
+                "    AddStage"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Targets",
+        "columns": [
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "dc612cfe-f6b2-4d95-bf25-877fe2657b8c",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Border_Post",
+            "dataType": "string",
+            "lineageTag": "553d6554-f3de-4086-943f-696336caf298",
+            "sourceColumn": "Border_Post",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Revenue_Target_USD",
+            "dataType": "double",
+            "formatString": "#,0.00",
+            "lineageTag": "f10caa7c-3841-43fd-811b-ae51a7c2c176",
+            "sourceColumn": "Revenue_Target_USD",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e3ec9d8f-41d6-43d2-aeef-acd581499d0f",
+        "partitions": [
+          {
+            "name": "Targets",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(ProjectFolder & \"data\\processed\\monthly_targets.csv\"), [Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"Month\", type text}, {\"Border_Post\", type text}, {\"Revenue_Target_USD\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ModelScores",
+        "columns": [
+          {
+            "name": "Declaration_ID",
+            "dataType": "string",
+            "lineageTag": "c912fd34-885f-4cd6-a524-c5982252237e",
+            "sourceColumn": "Declaration_ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Model_Gap_Probability",
+            "dataType": "double",
+            "formatString": "0.0%",
+            "lineageTag": "cf2d5c3a-b403-4ef1-bdd0-b1ed13ae889e",
+            "sourceColumn": "Model_Gap_Probability",
+            "summarizeBy": "average"
+          }
+        ],
+        "lineageTag": "64998d18-7f34-4064-8bb0-fc11550dd88b",
+        "partitions": [
+          {
+            "name": "ModelScores",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(ProjectFolder & \"data\\processed\\model_risk_scores.csv\"), [Delimiter=\",\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{\"Declaration_ID\", type text}, {\"Model_Gap_Probability\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TargetingComparison",
+        "columns": [
+          {
+            "name": "Strategy",
+            "dataType": "string",
+            "lineageTag": "6321ae6f-4299-4650-bfd2-57acfcf57eac",
+            "sourceColumn": "Strategy",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Strategy Type",
+            "dataType": "string",
+            "lineageTag": "a7377616-9370-4a00-9e53-00e139e533b4",
+            "sourceColumn": "Strategy Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Gap cases caught",
+            "dataType": "double",
+            "formatString": "0.0",
+            "lineageTag": "d13280df-ff87-44ef-a8de-4c00b24b5fc6",
+            "sourceColumn": "Gap cases caught",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Gap USD caught",
+            "dataType": "double",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "034080ee-225d-4f07-acab-50a105f6197c",
+            "sourceColumn": "Gap USD caught",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "% of gap cases",
+            "dataType": "double",
+            "formatString": "0.0",
+            "lineageTag": "bbbad982-ff67-44f1-9fc4-22d1f12d8fa0",
+            "sourceColumn": "% of gap cases",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "% of gap USD",
+            "dataType": "double",
+            "formatString": "0.0",
+            "lineageTag": "347c1192-07b2-49fa-b0e5-d774a2437fb0",
+            "sourceColumn": "% of gap USD",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Hit rate %",
+            "dataType": "double",
+            "formatString": "0.0",
+            "lineageTag": "38742ed7-1499-4f0a-bcf0-90c09f6842af",
+            "sourceColumn": "Hit rate %",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "4ee88a71-257c-45e0-b2ca-a6e546f38868",
+        "partitions": [
+          {
+            "name": "TargetingComparison",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(ProjectFolder & \"reports\\model_targeting_comparison.csv\"), [Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    NoHeader = Table.Skip(Source, 1),",
+                "    Renamed = Table.RenameColumns(NoHeader, {{\"Column1\", \"Strategy\"}, {\"Column2\", \"Gap cases caught\"}, {\"Column3\", \"Gap USD caught\"}, {\"Column4\", \"% of gap cases\"}, {\"Column5\", \"% of gap USD\"}, {\"Column6\", \"Hit rate %\"}}),",
+                "    Typed = Table.TransformColumnTypes(Renamed, {{\"Strategy\", type text}, {\"Gap cases caught\", type number}, {\"Gap USD caught\", type number}, {\"% of gap cases\", type number}, {\"% of gap USD\", type number}, {\"Hit rate %\", type number}}, \"en-US\"),",
+                "    AddType = Table.AddColumn(Typed, \"Strategy Type\", each if Text.StartsWith([Strategy], \"Model\") then \"Data-driven model\" else if [Strategy] = \"Random selection\" then \"Random\" else \"Current practice\", type text),",
+                "    Reordered = Table.ReorderColumns(AddType, {\"Strategy\", \"Strategy Type\", \"Gap cases caught\", \"Gap USD caught\", \"% of gap cases\", \"% of gap USD\", \"Hit rate %\"})",
+                "in",
+                "    Reordered"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "lineageTag": "c11f6399-309b-428f-b865-86947633cec6",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "15fa79cd-371e-4651-88f9-e5145c4d2326",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Name",
+            "dataType": "string",
+            "lineageTag": "f16200a1-3a1a-4d0f-91a0-cf3693738297",
+            "sortByColumn": "Month Number",
+            "sourceColumn": "Month Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month Number",
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "ea9cddea-6812-4f8d-87c1-fc1afa067daf",
+            "sourceColumn": "Month Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "486cfafa-749d-4922-b077-3e3c4f02fd4a",
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Dates = List.Dates(#date(2025, 1, 1), 365, #duration(1, 0, 0, 0)),",
+                "    AsTable = Table.FromList(Dates, Splitter.SplitByNothing(), {\"Date\"}),",
+                "    Typed = Table.TransformColumnTypes(AsTable, {{\"Date\", type date}}),",
+                "    AddMonth = Table.AddColumn(Typed, \"Month\", each Date.ToText([Date], [Format=\"yyyy-MM\", Culture=\"en-US\"]), type text),",
+                "    AddMonthName = Table.AddColumn(AddMonth, \"Month Name\", each Date.ToText([Date], [Format=\"MMM yyyy\", Culture=\"en-US\"]), type text),",
+                "    AddMonthNumber = Table.AddColumn(AddMonthName, \"Month Number\", each Date.Month([Date]), Int64.Type)",
+                "in",
+                "    AddMonthNumber"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "_Measures",
+        "columns": [
+          {
+            "name": "Column1",
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "96b9ca86-b8b0-4e9a-9df6-24c54d644918",
+            "sourceColumn": "Column1",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "265ac7a3-49d0-449e-a73f-176c219ee582",
+        "measures": [
+          {
+            "name": "Total Declared Revenue",
+            "displayFolder": "Revenue",
+            "expression": "SUM ( Transactions[Declared_Total_Revenue_USD] )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "41c5d4b8-78f0-4268-8cd9-f13755483306"
+          },
+          {
+            "name": "Total Assessed Revenue",
+            "displayFolder": "Revenue",
+            "expression": "SUM ( Transactions[Assessed_Total_Revenue_USD] )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "542465f6-657d-4465-84a4-d785d006a350"
+          },
+          {
+            "name": "Total Revenue Gap",
+            "displayFolder": "Revenue",
+            "expression": "SUM ( Transactions[Potential_Revenue_Gap_USD] )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "9717f0a0-9fb3-4a18-aadc-05ed0fe9e803"
+          },
+          {
+            "name": "Revenue Recovered",
+            "displayFolder": "Revenue",
+            "expression": "SUM ( Transactions[Additional_Revenue_Recovered_USD] )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "de3a3e47-73de-4284-8074-a766283544d6"
+          },
+          {
+            "name": "Unrecovered Gap",
+            "displayFolder": "Revenue",
+            "expression": "[Total Revenue Gap] - [Revenue Recovered]",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "4ca8163b-53a9-4dd0-8897-e18098f33549"
+          },
+          {
+            "name": "Recovery Rate",
+            "displayFolder": "Revenue",
+            "expression": "DIVIDE ( [Revenue Recovered], [Total Revenue Gap] )",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "3c3095e7-49d5-4491-a616-c79ce84d2f48"
+          },
+          {
+            "name": "Gap % of Assessed",
+            "displayFolder": "Revenue",
+            "expression": "DIVIDE ( [Total Revenue Gap], [Total Assessed Revenue] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "415c8501-725c-47d2-8bec-002dde3d93f6"
+          },
+          {
+            "name": "Gap Detected",
+            "displayFolder": "Detection",
+            "expression": "CALCULATE ( [Total Revenue Gap], Transactions[Offence_Detected] = \"Yes\" )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "a4916849-8e5f-4c07-898d-831ab67849e3"
+          },
+          {
+            "name": "Gap Never Inspected",
+            "displayFolder": "Detection",
+            "expression": "CALCULATE ( [Total Revenue Gap], Transactions[Inspection_Conducted] = \"No\" )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "174ba107-17b5-4f47-b4e3-17afc33629c4"
+          },
+          {
+            "name": "Gap Never Inspected %",
+            "displayFolder": "Detection",
+            "expression": "DIVIDE ( [Gap Never Inspected], [Total Revenue Gap] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "89cfeabb-58b0-4645-8f01-b178e463e72f"
+          },
+          {
+            "name": "Recovery Rate on Detected Gaps",
+            "displayFolder": "Detection",
+            "expression": "DIVIDE ( [Revenue Recovered], [Gap Detected] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "898b78b1-06a8-4713-bfcb-b75a5c26aa57"
+          },
+          {
+            "name": "Gap Share %",
+            "displayFolder": "Revenue",
+            "expression": "DIVIDE ( [Total Revenue Gap], CALCULATE ( [Total Revenue Gap], ALLSELECTED ( Transactions ) ) )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "49c15fc4-c548-493f-a5ec-080414e30315"
+          },
+          {
+            "name": "Declarations",
+            "displayFolder": "Inspection",
+            "expression": "COUNTROWS ( Transactions )",
+            "formatString": "#,0",
+            "lineageTag": "48377ae8-75ea-4267-adb5-8b9174d9032d"
+          },
+          {
+            "name": "Declarations With Gap",
+            "displayFolder": "Inspection",
+            "expression": "CALCULATE ( [Declarations], Transactions[Has_Revenue_Gap] = \"Yes\" )",
+            "formatString": "#,0",
+            "lineageTag": "606a6414-297d-42d5-8c0e-5d4f60f05dfc"
+          },
+          {
+            "name": "Gap Incidence",
+            "displayFolder": "Inspection",
+            "expression": "DIVIDE ( [Declarations With Gap], [Declarations] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "8b002f5c-b554-4c61-8f6b-fe0b99681a51"
+          },
+          {
+            "name": "Inspections",
+            "displayFolder": "Inspection",
+            "expression": "CALCULATE ( [Declarations], Transactions[Inspection_Conducted] = \"Yes\" )",
+            "formatString": "#,0",
+            "lineageTag": "db4ec963-614d-4494-ab9d-8e0b6bf74611"
+          },
+          {
+            "name": "Inspection Rate",
+            "displayFolder": "Inspection",
+            "expression": "DIVIDE ( [Inspections], [Declarations] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "105fbfc7-2033-4697-bed4-de3ca9f81014"
+          },
+          {
+            "name": "Offences",
+            "displayFolder": "Inspection",
+            "expression": "CALCULATE ( [Declarations], Transactions[Offence_Detected] = \"Yes\" )",
+            "formatString": "#,0",
+            "lineageTag": "255afd8b-3242-42cc-9d26-72be7853fdff"
+          },
+          {
+            "name": "Inspection Hit Rate",
+            "displayFolder": "Inspection",
+            "expression": "DIVIDE ( [Offences], [Inspections] )",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "lineageTag": "dc5f3cf3-1411-4ca5-8664-c3c7b3c8f929"
+          },
+          {
+            "name": "Avg Model Gap Probability",
+            "displayFolder": "Model",
+            "expression": "AVERAGE ( ModelScores[Model_Gap_Probability] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "0bee1374-0585-4147-a2ba-852aac49f1bf"
+          },
+          {
+            "name": "Revenue Target",
+            "displayFolder": "Targets",
+            "expression": "SUMX ( VALUES ( 'Calendar'[Month] ), LOOKUPVALUE ( Targets[Revenue_Target_USD], Targets[Month], 'Calendar'[Month] ) )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "6888434a-8be4-4a65-889b-97875cc170d8"
+          },
+          {
+            "name": "Target Achievement %",
+            "displayFolder": "Targets",
+            "expression": "DIVIDE ( [Total Assessed Revenue], [Revenue Target] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "ae67691b-4a64-437b-bb18-aced4e342a5a"
+          },
+          {
+            "name": "Shortfall vs Target",
+            "displayFolder": "Targets",
+            "expression": "[Revenue Target] - [Total Assessed Revenue]",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "73a3714d-008e-484d-bec3-86e30db07390"
+          },
+          {
+            "name": "Revenue in Part-paid or Pending",
+            "displayFolder": "Collections",
+            "expression": "CALCULATE ( [Total Assessed Revenue], Transactions[Payment_Status] IN { \"Part-paid\", \"Pending\" } )",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "lineageTag": "8cb86c20-478d-4166-b5a7-ab59cc01beeb"
+          },
+          {
+            "name": "Part-paid or Pending %",
+            "displayFolder": "Collections",
+            "expression": "DIVIDE ( [Revenue in Part-paid or Pending], [Total Assessed Revenue] )",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "70c79532-bcf3-4988-acd6-33bc042187db"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_Measures",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = #table(type table [Column1 = text], {})",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
